@@ -32,3 +32,4 @@ function sum (a, b) {
 sum(2, 3)(15)
 const fiveSumWith = sum(2, 3)
 fiveSumWith(5)
+
