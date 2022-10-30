@@ -4,3 +4,9 @@ const produtos = [
     { name: 'Copo de Vidro', price: 12.49, fragil: true},
     { name: 'Copo de plástico', price: 18.99, fragil: false},
 ]
+
+console.log(produtos.filter( p => {
+    if(p.fragil || p.price > 2500){
+        return p
+    }
+}))
