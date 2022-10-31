@@ -5,7 +5,11 @@ const student = [
     {name: 'Ana', nota: 6.7, bolsista: true},
 ]
 
-const result = student.map(student => student.nota).reduce((acumulador, atual) => {
-    console.log(acumulador, atual)
-    return acumulador + atual
-}, 10)
+const areAllBolsista = student.map(student => student.bolsista).reduce((acumulador, atual) => acumulador && atual)
+
+const isSomeoneBolsista = student.map(student => student.bolsista).reduce((acumulador, atual) => acumulador || atual)
+
+
+
+console.log('Todos alunos são bolsistas? ', `${areAllBolsista? 'Sim' : 'Não'}`)
+console.log('Algum aluno é bolsista? ', `${isSomeoneBolsista? 'Sim' : 'Não'}`)
